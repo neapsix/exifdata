@@ -1,0 +1,5 @@
+#----------------------------------------
+# 0. ARTIST PROPERTIES
+#----------------------------------------
+set   Exif.Image.Artist               Ascii   "<YOUR NAME>"
+set   Exif.Image.Copyright            Ascii   "Copyright 2018 <YOUR NAME>. All rights reserved."

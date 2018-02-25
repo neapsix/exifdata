@@ -1,0 +1,6 @@
+#----------------------------------------
+# 3. CAMERA PROPERTIES
+#----------------------------------------
+set   Exif.Image.Make                 Ascii   "<MAKE>"
+set   Exif.Image.Model                Ascii   "<MODEL>"
+set   Exif.Image.CameraSerialNumber   Ascii   "<S/N>"
