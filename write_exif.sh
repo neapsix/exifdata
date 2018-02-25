@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Applies scanner data and any other .exiv2 files
-# that are in this directory to the target files.
+# that are in this directory to the target file.
+
+# If you enter a date as the second argument, also
+# enters that date and a time of 18:00 as the original capture time.
 
 filename="$1"
 document_name=$(basename "$filename" | cut -d'.' -f 1)
@@ -20,7 +23,7 @@ if [ $# -eq 2 ]; then
   # if you know the date taken, enter it in the format YYYY:MM:DD
   datetimeorig=$2
 
-  exiv2 -M "set Exif.Photo.DateTimeDigitized Ascii $2 18:00:00" $filename
+  exiv2 -M "set Exif.Photo.DateTimeOriginal Ascii $2 18:00:00" $filename
 fi
 
 # run the rest of my exiv2 templates in this directory
