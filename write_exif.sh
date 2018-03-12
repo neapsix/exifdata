@@ -8,13 +8,13 @@
 
 filename="$1"
 document_name=$(basename "$filename" | cut -d'.' -f 1)
-datetime=$(date -r $filename +"%Y:%m:%d %H:%M")
+datetime=$(date -r $filename +"%Y:%m:%d %H:%M:%S")
 
 # set scanner properties
 exiv2 \
   -M "set Exif.Photo.DateTimeDigitized Ascii $datetime" \
   -M "set Exif.Image.DocumentName Ascii $document_name" \
-  -M "set Exif.Photo.UserComment Ascii Nikon LS-2000" \
+  -M "set Exif.Photo.UserComment Comment Nikon LS-2000" \
   $filename
 
 
