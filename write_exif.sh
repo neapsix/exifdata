@@ -14,7 +14,7 @@ datetime=$(date -r $filename +"%Y:%m:%d %H:%M:%S")
 exiv2 \
   -M "set Exif.Photo.DateTimeDigitized Ascii $datetime" \
   -M "set Exif.Image.DocumentName Ascii $document_name" \
-  -M "set Exif.Photo.UserComment Comment Nikon LS-2000" \
+  -M "set Exif.Photo.UserComment Comment PrimeFilm 7200" \
   $filename
 
 
